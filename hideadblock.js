@@ -11,6 +11,7 @@
 
 var premium_bar = 'Ogqyq'; // On bottom left
 var adblocking = 'GssDD'; // On right hand side
+var topLineAd = 'w8ZqB';
 
 // On page load run the function
 window.addEventListener(
@@ -23,6 +24,8 @@ window.addEventListener(
 
     // Bottom left "Get premium bar"
     var div_hide2 = document.getElementsByClassName(premium_bar);
+	
+	var div_hide3 = document.getElementsByClassName(topLineAd);
 
     // Iterate through our elements and hide them
     for (var i = 0; i < div_hide.length; i++)
@@ -32,6 +35,9 @@ window.addEventListener(
     }
 
     // Dirty delete, would be nicer with jquery
-    div_hide2[0].parentNode.removeChild(div_hide2[0]);
+    div_hide2 && div_hide2[0] && div_hide2[0].parentNode.removeChild(div_hide2[0]);
+	
+	    // Dirty delete, would be nicer with jquery
+    div_hide3 && div_hide3[0] && div_hide3[0].parentNode.removeChild(div_hide3[0]);
 
 }, false);
